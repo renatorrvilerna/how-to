@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--Este documento ha sido creado por Renato Romero de 1º de DAW en el centro Albor Croft, Jerez de la Frontera. Puedes usar, copiar y modificar este documento libremente. Si tienes cualquier duda sobre el código que ves a continuación, no dudes en contactarme a través del siguiente correo electrónico: blurry.erik@alumnos.alborfp.com.-->
+	<!--Última actualización de este documento: 03/03/2024.-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Renato R. Romero">
+        <title>How-to: Carpetas compartidas entre Linux y Windows</title>
+        <link rel="stylesheet" href="src/estilos.css">
+        <link rel="icon" type="image/x-icon" href="src/img/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>How-to:
+                <br>
+                Carpetas compartidas entre Linux y Windows
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introducción</a></li>
+                <li><a href="paso1.html">Paquetes e ISOs</a></li>
+                <li><a href="paso2.html">Oracle VM VirtualBox</a></li>
+                <li><a href="paso3.html">Windows 10</a></li>
+                <li><a href="paso4.html">Ubuntu 22.4.04</a></li>
+                <li id="actual">Samba</li>
+            </ul>
+        </nav>
+        <main>
+            <div class="contenedor">
+                <div class="caja">
+                    <h1>Samba</h1>
+                </div>
+                <div class="caja">
+                    <!--El iframe con el vídeotutorial en Youtube lo insertamos dentro del contenedor "caja".-->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TwJPpx-ruRw?si=5rf3JKTz3Ob8TsFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>Este último paso del tutorial está explicado en vídeo corto en el que, paso a paso, se comprobará la interconectividad entre ambas máquinas virtuales, instalará y configurará Samba, creará una carpeta compartida y un usuario en Ubuntu para acceder desde Windows y, finalmente, crearemos y modificaremos archivos desde ambos sistemas operativos.</p>
+                    <p>¡Esperamos que este tutorial paso a paso te haya servido de ayuda!</p>
+                    <p>Muchas gracias por visitarnos.</p>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="src/img/ubuntu.svg" alt="Ubuntu." title="Instalación de Ubuntu.">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Paso anterior: Ubuntu</h3>
+                        <a href="paso4.html">Retroceder</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="volverArriba">Volver arriba</div>
+            <div class="iconos">
+                <div class="iconos">
+                    <a href="mailto:blurry.erik@alumnos.alborfp.com"><img src="src/img/gmail.png" alt="Gmail." title="Gmail."></a>
+                    <a href="https://github.com/renatorrvilerna"><img src="src/img/github.png" alt="Github." title="Github."></a>
+                    <a href="https://www.linkedin.com/in/renato-r-romero-valencia-12a803170/"><img src="src/img/linkedin.png" alt="Linkedin." title="Linkedin."></a>
+                    <a href="https://twitter.com/Erikuri_"><img src="src/img/x.png" alt="X." title="X."></a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.getElementById('volverArriba').addEventListener('click', function() {
+                window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            });
+          </script>
+    </body>
+</html>

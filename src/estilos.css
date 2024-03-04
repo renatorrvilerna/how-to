@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid; /*Aquí y en las siguientes reglas definimos la estructura grid que usaremos para darle formato a la página.*/
+    grid-template-rows: auto minmax(20%, auto) 1fr auto;
+    grid-template-columns: 15% 85%;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Open Sans', sans-serif; /*Para la mayor parte del texto, usaremos la fuente importada de Google Fonts, Open Sans.*/
+}
+  
+header {
+    background-color: #525174;
+    color: #FFFFFF;
+    grid-row: 1 / 2; /*Filas que usará el header.*/
+    grid-column: 1 / 3; /*Columnas que usará el header.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    top: 0;
+    text-shadow: 3px 3px 4px black;
+}
+
+/*Para los títulos a lo largo del documento usaremos la otra fuente importada: Montserrat.*/
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+  
+nav {
+    background-color: #c2c6d5;
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+    padding: 20px;
+    position: sticky; /*Haremos que el nav acompañe al usuario a lo largo de la página aunque haga scroll.*/
+    top: 0; /*Con esto aseguraremos que nav se quede pegado a la parte superior del contenedor.*/
+    font-size: 18px;
+}
+  
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+nav li {
+    margin-bottom: 20px;
+}
+
+nav li a {
+    text-decoration: none; /*Quitamos el subrayado de los enlaces*/
+    color: #000000; /* Color de texto para los enlaces */
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aplicar la transición suave aquí */
+}
+
+/*Resaltamos con negrita en el índice la página en la que nos encontramos actualmente.*/
+nav li#actual {
+    font-weight: bold;
+    padding: 5px 20px;
+}
+  
+/*Estas selector hará resaltar el resto de enlaces del índice cuando pasemos por encima el ratón*/
+nav li a:hover {
+    font-size: 20px;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: #a7b0ca;
+}
+  
+main {
+    background-color: #F9F6EE;
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main a {
+    text-decoration: none;
+}
+
+/*Nos aseguramos de fijar la posición de los contenedores que contienen los pasos del tutorial y las cards.*/
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Aquí definiremos las reglas para los elementos "caja". En ellos se encuentra el tutorial.*/
+.caja {
+    align-items: center;
+    background-color: #FAF9F6;
+    width: 800px;
+    height: auto;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #000000;
+    text-align: justify;
+    text-align-last: center; /*Hacemos que la última línea de un párafo, aunque esté justificado, se alinee en el centro.*/
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2); /*Sombreado para la caja.*/
+}
+
+.caja img {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+/*Gracias a este selector y su regla, al pasar el ratón por encima de las imágenes estas se expandirán para poder apreciar mejor los detalles de la imagen.*/
+.caja img:hover {
+    transform: scale(1.5);
+}
+
+.card {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    align-self: center;
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column; /*Para apilar verticalmente los elementos dentro de los elementos "card".*/
+    border-radius: 10px;
+    border: 2px solid #000000;
+    overflow: hidden;
+    background-color: #FAF9F6;
+    box-shadow: 1px 3px 15px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    align-items: center;
+}
+
+.contenedor-card {
+    display: flex;
+    gap: 30px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-5%); /*Con esta regla dará la sensación de que la "card" da un pequeño saltito al pasar el ratón por encima.*/
+}
+
+.card img {
+    border-radius: 10px;
+    border: 3px solid #000000;
+    box-shadow: 1px 3px 15px rgba(0,0,0,0.4);
+    width: 150px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.card .contenido p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card .contenido h3 {
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card .contenido a {
+    margin-bottom: 15px;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: #000000;
+    border: 1px solid #000000; /*Con esto daremos la sensación de que el enlace es, en realidad, un botón.*/
+    border-radius: 5px; /*Redondeamos los bordes del botón.*/
+    transition: all 400ms ease;
+    display: inline-block; /* Para que el enlace sea centrado horizontalmente */
+}
+
+/*Con esta animación de hover, el "botón" del enlace cambiará de color de fondo y de texto.*/
+.card .contenido a:hover {
+    background-color: #525174;
+    color: white;
+}
+
+footer {
+    background-color: #525174;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+    position: relative;
+}
+
+/*Gracias a este selector, podemos centrar adecuadamente los iconos del pie de página.*/
+.iconos {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.iconos img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0px 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*Animación similar a la usada con las cartas, pero más sutil. El icono se desplazará ligeramente hacia arriba al pasar el ratón por encima.*/
+.iconos img:hover {
+    transform: translateY(-3%);
+}
+
+/*Estilo para darle la sensación de botón al script de "volverArriba".*/
+#volverArriba {
+    position: absolute;
+    bottom: 88px;
+    left: 0;
+    right: 0;
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#volverArriba:hover {
+    background-color: #555;
+}

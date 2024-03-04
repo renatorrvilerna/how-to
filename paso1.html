@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--Este documento ha sido creado por Renato Romero de 1º de DAW en el centro Albor Croft, Jerez de la Frontera. Puedes usar, copiar y modificar este documento libremente. Si tienes cualquier duda sobre el código que ves a continuación, no dudes en contactarme a través del siguiente correo electrónico: blurry.erik@alumnos.alborfp.com.-->
+	<!--Última actualización de este documento: 20/02/2024.-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Renato R. Romero">
+        <title>How-to: Carpetas compartidas entre Linux y Windows</title>
+        <link rel="stylesheet" href="src/estilos.css">
+        <link rel="icon" type="image/x-icon" href="src/img/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>How-to:
+                <br>
+                Carpetas compartidas entre Linux y Windows
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introducción</a></li>
+                <li id="actual">Paquetes e ISOs</li>
+                <li><a href="paso2.html">Oracle VM VirtualBox</a></li>
+                <li><a href="paso3.html">Windows 10</a></li>
+                <li><a href="paso4.html">Ubuntu 22.4.04</a></li>
+                <li><a href="paso5.html">Samba</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="contenedor">
+                <div class="caja">
+                    <h1>Paquetes e ISOs</h1>
+                </div>
+                <div class="caja">
+                    <h2>Paso 1: Oracle VM VirtualBox</h2>
+                    <img src="src/img/paso1/1.png" alt="Página principal de Oracle VM VirtualBox." title="Página principal de Oracle VM VirtualBox.">
+                    <p>Para simular la existencia de dos ordenadores distintos haremos empleo de las llamadas <a href="https://es.wikipedia.org/wiki/M%C3%A1quina_virtual#:~:text=El%20concepto%20de%20m%C3%A1quina%20virtual,donde%20solo%20existen%20como%20c%C3%B3digo.">“Máquinas Virtuales”</a>. Una máquina virtual no es más que un software capaz de cargar en su interior otro sistema operativo haciéndole creer que es un PC de verdad.</p>
+                    <p>Vamos a usar una herramienta de código abierto ampliamente conocida por su eficiencia en este ámbito: <b>Oracle VM VirtualBox</b>.</p>
+                    <p>Para descargarla debemos ir a su <a href="https://www.virtualbox.org/"><b>página web</b></a> y dirigirnos a la seción <a href="https://www.virtualbox.org/wiki/Downloads"><b>"Downloads"</b></a> y elegir la opción que más se adecúe a nuestro caso. Podrás descargarlo sin problema, ya que es gratuito.</p>
+                </div>
+                <div class="caja">
+                    <h2>Paso 2: Ubuntu</h2>
+                    <img src="src/img/paso1/2.png" alt="Página principal de Ubuntu." title="Página principal de Ubuntu.">
+                    <p>Para el ordenador que simularemos usando Linux vamos a utilizar <a href="https://ubuntu.com/"><b>Ubuntu</b></a>, una de las distribuciones más populares por ser muy amigable con para con el usuario. </p>
+                    <img src="src/img/paso1/3.png" alt="Página de descargas de Ubuntu." title="Página de descargas de Ubuntu.">
+                    <p>Obtendremos la imagen .ISO desde la <a href="https://ubuntu.com/download"><b>sección de descargas de su página web oficial</b></a>, ya que se trata de software libre y gratuito. Nos descargaremos la versión más reciente (en nuestro caso la 22.04.4 a fecha 1 de Marzo de 2024). La descarga comenzará automáticamente al hacer clic en el enlace.</p>
+                </div>
+                <div class="caja">
+                    <h2>Paso 3: Windows</h2>
+                    <img src="src/img/paso1/4.png" alt="Página de descarga de Windows 10." title="Página de descarga de Windows 10.">
+                    <p>Windows no necesita presentación. Es el Sistema Operativo más popular y utilizado del mundo. Para este tutorial nos hemos decantado por el uso de Windows 10.</p>
+                    <p>Conseguir la ISO de Windows 10 de manera legal y gratuita resultará ligeramente más complejo que los pasos anteriores. Deberemos ir a la página de <a href="https://www.microsoft.com/es-es/software-download/windows10"><b>descarga de Windows 10</b></a>. Allí, deberemos descargar la <b>herramienta de creación de medios</b>. La descarga comenzará automáticamente al hacer clic en el enlace.</p>
+                    <img src="src/img/paso1/5.png" alt="Descarga de la herramienta de creación de medios." title="Descarga de la herramienta de creación de medios.">
+                    <p>Al abrir el programa se nos dará a elegir entre  actualizar nuestro equipo o crear un medio de instalación. Deberemos darle a la segunda opción.</p>
+                    <img src="src/img/paso1/6.png" alt="Herramienta de creación de medios - Actualizar equipo o crear medios de instalación." title="Herramienta de creación de medios - Actualizar equipo o crear medios de instalación.">
+                    <p>A continuación seleccionaremos el idioma, arquitectura y edición del Sistema Operativo (español de España, Windows 10 y 64 bits en nuestro caso particular). Entonces podremos elegir entre crear una unidad Flash USB de instalación, o, la opción que nos interesa en este caso, guardar el archivo .ISO. Seleccionamos este último.</p>
+                    <img src="src/img/paso1/7.png" alt="Herramienta de creación de medios - Crear una unidad Flash USB o guardar imagen .ISO." title="Herramienta de creación de medios - Crear una unidad Flash USB o guardar imagen .ISO.">
+                    <p>Se desplegará una ventana con el explorador de Windows para que podamos elegir en qué carpeta deseamos guardar la imagen .ISO de Windows 10.</p>
+                    <p>Una vez guardada, ya tendríamos todo preparado para crear nuestras máquinas virtuales.</p>
+                </div>
+                <div class="contenedor-card"> <!--Para agrupar los elementos "card" y poder posicionarlos de manera correcta.-->
+                    <div class="card">
+                        <figure>
+                            <img src="src/img/favicon.png" alt="Introducción." title="Introducción.">
+                        </figure>
+                        <div class="contenido">
+                            <h3>Paso anterior: Introducción</h3>
+                            <a href="index.html">Retroceder</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="src/img/virtualbox.png" alt="Oracle VM VirtualBox." title="Oracle VM VirtualBox.">
+                        </figure>
+                        <div class="contenido">
+                            <h3>Siguiente paso: VirtualBox</h3>
+                            <a href="paso2.html">Avanzar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="volverArriba">Volver arriba</div>
+            <div class="iconos">
+                <div class="iconos">
+                    <a href="mailto:blurry.erik@alumnos.alborfp.com"><img src="src/img/gmail.png" alt="Gmail." title="Gmail."></a>
+                    <a href="https://github.com/renatorrvilerna"><img src="src/img/github.png" alt="Github." title="Github."></a>
+                    <a href="https://www.linkedin.com/in/renato-r-romero-valencia-12a803170/"><img src="src/img/linkedin.png" alt="Linkedin." title="Linkedin."></a>
+                    <a href="https://twitter.com/Erikuri_"><img src="src/img/x.png" alt="X." title="X."></a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.getElementById('volverArriba').addEventListener('click', function() {
+                window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+
+
+            });
+          </script>
+    </body>
+</html>

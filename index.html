@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!--Este documento ha sido creado por Renato Romero de 1º de DAW en el centro Albor Croft, Jerez de la Frontera. Puedes usar, copiar y modificar este documento libremente. Si tienes cualquier duda sobre el código que ves a continuación, no dudes en contactarme a través del siguiente correo electrónico: blurry.erik@alumnos.alborfp.com.-->
+	<!--Última actualización de este documento: 20/02/2024.-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Renato R. Romero">
+        <title>How-to: Carpetas compartidas entre Linux y Windows</title>
+        <!--Definimos el archivo CSS que usaremos para darle estilos a la página.-->
+        <link rel="stylesheet" href="src/estilos.css">
+        <!--Seleccionaremos el icono que usaremos como favicon para nuestra página.-->
+        <link rel="icon" type="image/x-icon" href="src/img/favicon.png">
+        <!--A continuación hemos importado dos fuentes de Google Fonts que usaremos en la página. "Montserrat" y "Opens Sans".-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>How-to:
+                <br>
+                Carpetas compartidas entre Linux y Windows
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li id="actual">Introducción</li> <!--El ID "actual" resaltará la sección en la que nos encontramos actualmente y haremos que deje de ser un enlace.-->
+                <li><a href="paso1.html">Paquetes e ISOs</a></li>
+                <li><a href="paso2.html">Oracle VM VirtualBox</a></li>
+                <li><a href="paso3.html">Windows 10</a></li>
+                <li><a href="paso4.html">Ubuntu 22.4.04</a></li>
+                <li><a href="paso5.html">Samba</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!--Cada paso del tutorial y las "cards" para desplazarse por el tutorial estarán encapsulados en una "caja". Las distintas cajas en un "contenedor".-->
+            <div class="contenedor">
+                <div class="caja">
+                    <h1>Introducción</h1>
+                </div>
+                <div class="caja">
+                    <img src="src/img/introduccion.png" alt="Transferencia de archivos entre máquinas virtuales." title="Transferencia de archivos entre máquinas virtuales.">
+                    <p>Hoy en día un entorno de trabajo que se precie debe estar preparado para trabajar de forma modular y permitir la comunicación entre diversos dispositivos que, por supuesto, trabajarán en ocasiones con Sistemas Operativos distintos.
+                    En este breve tutorial vamos a enseñarte a usar un servicio llamado Samba desde Ubuntu para permitir la comunicación y la transferencia de archivos entre Linux y Windows de manera más sencilla de lo que podrías pensar. </p>
+                </div>
+                <div class="card">
+                    <figure>
+                        <img src="src/img/iso.webp" alt="Imagen ISO." title="Paquetes e ISOs.">
+                    </figure>
+                    <div class="contenido">
+                        <h3>Primer paso: Paquetes e ISOs</h3>
+                        <a href="paso1.html">¡Comenzamos!</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--En el footer hemos dejado unos iconos que redirigen a distintas páginas mías de posible interés.-->
+        <footer>
+            <div id="volverArriba">Volver arriba</div> <!--Esto nos servirá para desplazarnos hacia arriba en -->
+            <div class="iconos">
+                <a href="mailto:blurry.erik@alumnos.alborfp.com"><img src="src/img/gmail.png" alt="Gmail." title="Gmail."></a>
+                <a href="https://github.com/renatorrvilerna"><img src="src/img/github.png" alt="Github." title="Github."></a>
+                <a href="https://www.linkedin.com/in/renato-r-romero-valencia-12a803170/"><img src="src/img/linkedin.png" alt="Linkedin." title="Linkedin."></a>
+                <a href="https://twitter.com/Erikuri_"><img src="src/img/x.png" alt="X." title="X."></a>
+            </div>
+        </footer>
+        <!--Este pequeño script de javascript hará que al pulsar el div de "volverArriba", la página ascenderá hasta el punto inicial.-->
+        <script>
+            document.getElementById('volverArriba').addEventListener('click', function() {
+                window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            });
+          </script>
+    </body>
+</html>
